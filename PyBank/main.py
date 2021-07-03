@@ -3,7 +3,7 @@ import csv
 
 datapath = os.path.join('Resources','budget_data.csv')
 #Opening the file
-with open (datapath) as budget_data_file:
+with open (datapath, 'r') as budget_data_file:
     #Moving to the next line since there are headers in the csv provided
     next(budget_data_file)
     #Reading from the csv file
@@ -18,10 +18,18 @@ with open (datapath) as budget_data_file:
     #FOr each row in the list "data", convering values into Integer and adding using Sum function.
     Net_Total_Amount = sum(int(x[1]) for x in data)
     print (str(Net_Total_Amount))
+
+
+
 #Calculating the average of the changes in "Profit/Losses" over the entire period
     Average = Net_Total_Amount/Total_Months
     print(str(Average))
 
+        for row in csv_reader:
+            # use whatever index for the value, or however you want to construct your new value
+            new_value = csv_reader[row+1]-csv_reader[row]
+            row.append(new_value)
+            csv_writer.writerow(row)
  
   
 
