@@ -39,7 +39,7 @@ Winner=round(percentages.max(), 4)
 winner_name= result_df.loc[Winner,"Candidate"]
 
 #Writing Output to text file
-with open("Output.txt", 'x') as f:
+with open("Analysis\PyPoll_Output_textfile.txt", 'x') as f:
     
     f.write("Election Results"+'\n')
     f.write("----------------------------------"+'\n')
@@ -56,7 +56,7 @@ with open("Output.txt", 'x') as f:
 f.close()
 
 #Reading Output from text file
-with open("Output.txt", "r") as f:
+with open("Analysis\PyPoll_Output_textfile.txt", "r") as f:
 	print(f.read())
   
 
