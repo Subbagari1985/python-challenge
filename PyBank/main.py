@@ -33,7 +33,7 @@ Greatest_Increase_Month=result_df.loc[Max_Change,"Date"]
 Greatest_Decrease_Month=result_df.loc[Min_Change,"Date"]
 
 #Writing Output to text file and terminal
-with open("PyBank_Output.txt", 'x') as f:
+with open("Analysis\PyBank_Output_textfile.txt", 'x') as f:
     
     f.write("Financial Analysis"+'\n')
     f.write("----------------------------------"+'\n')
@@ -45,7 +45,7 @@ with open("PyBank_Output.txt", 'x') as f:
 f.close()
 
 #Reading Output from text file
-with open("PyBank_Output.txt", "r") as f:
+with open("Analysis\PyBank_Output_textfile.txt", "r") as f:
 	print(f.read())
 
 
