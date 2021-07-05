@@ -1,40 +1,49 @@
 import os
 import csv
+import pandas as pd
+from pandas.core.frame import DataFrame
 
 datapath = os.path.join('Resources','budget_data.csv')
 #Opening the file
-with open (datapath, 'r') as budget_data_file:
-    #Moving to the next line since there are headers in the csv provided
-    next(budget_data_file)
-    #Reading from the csv file
-    csv_reader = csv.reader(budget_data_file, delimiter=",")
-    #Assigning the list from the csv to the variable data
-    data = list(csv_reader)
-#Calculating total number of MOnths in the csv provided
-    Total_Months = len(data)
-    print(Total_Months)
+with open(datapath) as budget_data_file:
+
+
+    df = pd.read_csv(datapath, usecols = ['Date','Profit/Losses'])
+
+#List of Candidates participated in the election
+unique_TotalMonths = df['Date'].unique()
+Number_Total_Months= pd.value_counts(unique_TotalMonths).count()
+
+
+Net_Total_Amount= df['Profit/Losses'].sum()
+
+
+PL_Amount = df['Profit/Losses']
+Change = df['Profit/Losses'].diff()
+
+result={"Date":unique_TotalMonths,"Profit/Losses":PL_Amount, "Difference/Change":Change}
+result_df=pd.DataFrame(result)
+result_df = result_df.set_index(Change)
+
+Max_Change=Change.max().__round__()
+Min_Change=Change.min().__round__()
+Average_Change=Change.mean().__round__(2)
+Greatest_Month=result_df.loc[Max_Change,"Difference/Change"]
+print(Greatest_Month)
+
+#with open("PyBank_Output.txt", 'x') as f:
     
-#Calculating the net total amount of "Profit/Losses" over the entire period
-    #FOr each row in the list "data", convering values into Integer and adding using Sum function.
-    Net_Total_Amount = sum(int(x[1]) for x in data)
-    print (str(Net_Total_Amount))
-
-
-
-#Calculating the average of the changes in "Profit/Losses" over the entire period
-    Average = Net_Total_Amount/Total_Months
-    print(str(Average))
-
-        for row in csv_reader:
-            # use whatever index for the value, or however you want to construct your new value
-            new_value = csv_reader[row+1]-csv_reader[row]
-            row.append(new_value)
-            csv_writer.writerow(row)
- 
-  
-
-
-         
-
+    #f.write("Financial Analysis"+'\n')
+    #f.write("----------------------------------"+'\n')
+    #f.write("Total Months: " +str(Number_Total_Months)+'\n')
+    #f.write("Total:  $" +str(Net_Total_Amount)+'\n')
+   # f.write("Average Change: $" +str(Change.mean().__round__(2))+'\n')
+  #  f.write("Greatest Increase in Profits:" +str(Change.max().__round__()+'\n'))
+ #   f.write("Greatest Decrease in Profits:" +str(Change.min().__round__()+'\n'))
+#f.close()
+#
+#Reading Output from text file#
+with open("PyBank_Output.txt", "r") as f:#
+	print(f.read())
 
 
