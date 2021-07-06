@@ -10,26 +10,28 @@ Based on the budget data from 2010 to early 2017, Business requirement is to ana
 
 PyBank Data: 
 
-Calculating unique list of Months and count of Months.
+1. Calculate unique list of Months and count of Months for which Profit/Losses are provided.
 
-Calculating Total Amount of Profits/Losses.
+2. Calculate Total Amount of Profits/Losses from 2010 to early 2017.
 
-Calculating the difference in Profit and Loss Amount.
+3. Calculate the difference in Profit and Loss Amount to understand Greatest Profits/Losses through the timeperiod.
 
-Calculating values using functions Max,Min,Mean and retreiving the dates using loc.
+4. Calculating values using functions Max,Min,Mean and retreiving the dates using loc.
 
-Writing Output to text file and terminal.
+5. Writing Output to text file and terminal.
 
 PyPoll Data:
 
-Calculate total number of Votes in the Election.
+1. Calculate total number of Votes in the Election.
 
-List of Candidates participated in the election.
+2. List of Candidates participated in the election.
 
-Calculate Number of Votes for each candidate in the election.
+3. Calculate Number of Votes for each candidate in the election.
 
-Calculate Percentages of Votes received for each candidate.
+4. Calculate Percentages of Votes received for each candidate.
 
-Determine who won the election using Loc.
+5. Determine who won the election using Loc.
+
+6. Write Output to terminal and text file. 
 
 
