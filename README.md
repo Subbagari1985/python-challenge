@@ -35,8 +35,18 @@ PyPoll Data:
 6. Write Output to terminal and text file. 
 
 # Conclusion
-PyPoll Screenshots:
+# PyPoll Screenshots:
+1) Output in Terminal
 ![image](https://user-images.githubusercontent.com/85588653/124538150-256dbf80-dde9-11eb-9faf-4b74b5ce265b.png)
+
+2) Output in text file
 ![image](https://user-images.githubusercontent.com/85588653/124538190-328aae80-dde9-11eb-98c6-98ba60b89bd8.png)
+
+# PyBank Screenshots:
+1) Output in Terminal
+![image](https://user-images.githubusercontent.com/85588653/124538412-96ad7280-dde9-11eb-9533-5707f67afd24.png)
+
+2) Output in text file
+![image](https://user-images.githubusercontent.com/85588653/124538449-a62cbb80-dde9-11eb-8f6a-6b35014c09d9.png)
 
 
