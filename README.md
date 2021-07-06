@@ -1,9 +1,9 @@
 # python-challenge
 Analyzing financial and election records of the company (PyPoll and PyBank data).
-Background
+# Background
 Based on the budget data from 2010 to early 2017, Business requirement is to analyze the financial information and calculate the timelines for when the company has made Greatest profits and Greatest Losses. Based on the election data, Business requirement is to analyze and calculate the votes for each candidate, percentage and determine who the winner is.
 
-Process
+# Process
 PyBank Data: 
 Calculating unique list of Months and count of Months.
 Calculating Total Amount of Profits/Losses.
@@ -11,11 +11,18 @@ Calculating the difference in Profit and Loss Amount.
 Calculating values using functions Max,Min,Mean and retreiving the dates using loc.
 Writing Output to text file and terminal.
 
-PyPoll Data:
+# PyPoll Data:
 Calculate total number of Votes in the Election.
 List of Candidates participated in the election.
 Calculate Number of Votes for each candidate in the election.
 Calculate Percentages of Votes received for each candidate.
 Determine who won the election using Loc.
 
-Conclusion  
+# Conclusion  
+
+# PyBank Screenshots
+![alt text](https://github.com/Subbagari1985/python-challenge/blob/main/PyBank/Output_Terminal.PNG)
+![alt text](https://github.com/Subbagari1985/python-challenge/blob/main/PyBank/Output_Textfile.PNG)
+# PyPoll Screenshots
+![alt text](https://github.com/Subbagari1985/python-challenge/blob/main/PyPoll/PyPoll%20-%20Terminal%20Output.png)
+![alt text](https://github.com/Subbagari1985/python-challenge/blob/main/PyPoll/PyPoll%20-%20Output%20in%20text%20file.PNG)
