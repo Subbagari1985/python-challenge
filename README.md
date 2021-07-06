@@ -34,4 +34,9 @@ PyPoll Data:
 
 6. Write Output to terminal and text file. 
 
+# Conclusion
+PyPoll Screenshots:
+![image](https://user-images.githubusercontent.com/85588653/124538150-256dbf80-dde9-11eb-9faf-4b74b5ce265b.png)
+![image](https://user-images.githubusercontent.com/85588653/124538190-328aae80-dde9-11eb-98c6-98ba60b89bd8.png)
+
 
